@@ -14,17 +14,31 @@
 * Refactor code
 
 
-
+----
 
 
 # General Outline of Tasks
 
 For this project we are mainly working on the client side.
 
+
+## Initial Decisions / Stuff that's not actually coding
+* Components - names, how many
+* What properties we want to get from the weather API JSON (e.g.city name, max temp... ) and how many weather types we will have
+* What messages we are going to display for each weather type
+* Get CSS images for weather
+
+----
+
 ## Server Side
+
+- CSS: General styling rules for the whole page. Also need to get CSS images, store them in public folder, and make sure they display to the correct size/layout.
+
 - Routes file - may not need anything additional. (Need to check if the post route for the location input form needs to go here or on the client side in API function?)
 
+----
 ## Client Side
+
 - Api.js: use superagent to write function for Weather API - we want to take the input information from post route and insert it into the API function get request URL. This will return a JSON object from which we select the properties we would like to display (city name, max and min temperature in celsius, description (e.g. cloudy) etc)
 
 - Based on the weather conditions, we will display a message in our component file (e.g. if sunny, display x)... One idea is we can have multiple options for each condition and the messages can be selected randomly.
@@ -38,7 +52,7 @@ For this project we are mainly working on the client side.
   - Recommendations (hash route) for displaying our other APIs
 
 
-
+----
 
 # A starter webpack project for React
 
