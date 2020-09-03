@@ -10,8 +10,8 @@
 * Display a map?
 * Up our CSS game
 * Create more routes or stateful components (e.g. on click etc)
-* launch on Heroku
-* refactor code
+* Deploy to Heroku
+* Refactor code
 
 
 
@@ -22,17 +22,17 @@
 For this project we are mainly working on the client side.
 
 ## Server Side
-- Routes file - may not need anything added to it. (Need to check if the post route for the location input form needs to go here or on the client side in API function?)
+- Routes file - may not need anything additional. (Need to check if the post route for the location input form needs to go here or on the client side in API function?)
 
 ## Client Side
-- Api.js: use superagent to write function for Weather API - we want to take the input information from post route and insert it into the API function get request. This will return a JSON object from which we select the properties we would like to display (city name, max and min temperature in celsius, description (e.g. cloudy) etc)
+- Api.js: use superagent to write function for Weather API - we want to take the input information from post route and insert it into the API function get request URL. This will return a JSON object from which we select the properties we would like to display (city name, max and min temperature in celsius, description (e.g. cloudy) etc)
 
 - Based on the weather conditions, we will display a message in our component file (e.g. if sunny, display x)... One idea is we can have multiple options for each condition and the messages can be selected randomly.
 
 - Hash route for Recommendations component: E.g. this could just display a specific photo from an API and perhaps a message to go with it. This also displays conditionally based on the weather condition.
 
-- Components - there will be at least 3-4:
-  - Location submit input
+- Components - there will be at least 3-4 (and I suspect that they will all need to be stateful):
+  - Location submit input (could be combined with the weather conditions one though)
   - Weather conditions (from API)
   - Message of recommendation (string)
   - Recommendations (hash route) for displaying our other APIs
