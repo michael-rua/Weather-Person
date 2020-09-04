@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
   sunny: {
     message: "it's sunny"
   },
@@ -6,3 +6,21 @@ module.exports = {
     message: "it's rainy"
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default data
