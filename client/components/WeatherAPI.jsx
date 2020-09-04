@@ -1,4 +1,5 @@
 import React from 'react'
+import Message from './Message'
 import { getWeather } from '../api'
 
 class WeatherApi extends React.Component {
@@ -10,16 +11,6 @@ class WeatherApi extends React.Component {
     input: ''
   }
 
-  // componentDidMount () {
-  //   getWeather(this.state.input)
-  //     .then(wth => { console.log(wth.weather)
-  //       this.setState({
-  //         weather: wth.weather,
-  //         main: wth.main,
-  //         wind: wth.wind
-  //       })
-  //     })
-  // }
   handleChange = (event) => {
     const { name, value } = event.target
     this.setState({
@@ -27,18 +18,13 @@ class WeatherApi extends React.Component {
     })
   }
 
-
-
    capitalFirst = (input) => {
-    return input.charAt(0).toUpperCase() + input.slice(1) 
-  }
-
-
-
+     return input.charAt(0).toUpperCase() + input.slice(1)
+   }
 
 handleClick = () => {
   console.log(this.state.input)
-  
+
   const input = this.state.input
  
  let finalCity = this.capitalFirst(input) 
@@ -55,10 +41,6 @@ handleClick = () => {
         })
     }
   
-
-    
-    
-
   render () {
     const {weather, main, wind, name} = this.state
     return (
@@ -80,12 +62,13 @@ handleClick = () => {
         Temperature: { main?.temp}
       </h3>
       <h3>
-        Wind Direction & Speed: { wind?.deg} degrees { wind?.speed}m/s
+        Wind Speed & Direction: { wind?.deg} degrees { wind?.speed}m/s
       </h3>
+      <Message main={weather[0]?.main}/>
       </div>
       </>
-    )
-  }
+  )
+}
 }
 
 export default WeatherApi
