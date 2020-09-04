@@ -64,16 +64,17 @@ handleClick = () => {
       Search: <input id="input" name= 'input' 
       value={this.state.input}
       onChange={this.handleChange}/>
-      <button onClick={this.handleClick}>Show me the Weather</button>
-      <p>
+      <button id="btn" onClick={this.handleClick}>Show me the Weather</button>
+      <h3>
         How does it look outside? { weather[0]?.description}
-      </p>
-      <p>
+      </h3>
+      
+      <h3>
         Temperature: { main?.temp}
-      </p>
-      <p>
+      </h3>
+      <h3>
         Wind Speed & Direction: { wind?.deg} degrees { wind?.speed}m/s
-      </p>
+      </h3>
       </>
     )
   }
