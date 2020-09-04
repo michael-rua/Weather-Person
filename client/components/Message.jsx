@@ -1,32 +1,48 @@
 import React from 'react'
-import request from 'superagent'
 
 import data from '../../data/data'
 
-const weatherConditions = Object.keys(data)
-const condition = 'clear'
-let message = (data[condition].message)
-
-const img = '09'
-
 export default class Message extends React.Component {
-  // message () {
-  //   if (condition === 'sunny') {
-  //     const result = data.sunny.message
-  //     return console.log(result)
-  //   }
-  // }
+  constructor (props) {
+    super(props)
+    this.state = {
+      condition: ''
+    }
+  }
 
+  message = ''
+  img = ''
 
+  componentDidMount () {
+    this.setState = {
+      condition: this.props.main
+    }
+    this.message = data[this.state.condition].message
+    this.img = data[this.state.condition].img
+  }
 
   render () {
     return (
      <>
      <div className='container'>
-      <p>{message}</p>
-      <img src={`http://openweathermap.org/img/wn/${img}d@2x.png`} alt=""/>
+       <p>{this.message}</p>
+       <img src={`http://openweathermap.org/img/wn/${this.img}d@2x.png`} alt=""/>
      </div>
      </>
     )
   }
 }
+
+
+// function checkWeather () {
+//   let message = ''
+//   if (condition !== 'clear' || 'drizzle' || 'rainy' || 'clouds' || 'snow' || 'thunderstorm') {
+//     message = 'Uh oh, climate change!'
+//     // let img = '50'
+//     return message
+//   } else {
+
+//     return message
+
+//   }
+// }
