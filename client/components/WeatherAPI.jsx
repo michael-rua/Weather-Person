@@ -67,7 +67,7 @@ render () {
       <p>
         Wind Speed & Direction: { wind?.deg} degrees { wind?.speed}m/s
       </p>
-      <Message main={'snow'}/>
+      <Message main={weather[0]?.main}/>
       </>
   )
 }
