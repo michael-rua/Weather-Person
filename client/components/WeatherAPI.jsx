@@ -61,10 +61,13 @@ handleClick = () => {
     const {weather, main, wind} = this.state
     return (
       <>
-      Search: <input id="input" name= 'input' 
+      <div id="div1">
+      <h1 id="title">City Weather</h1>
+      <h3>Search: <input id="input" name= 'input' 
       value={this.state.input}
       onChange={this.handleChange}/>
-      <button id="btn" onClick={this.handleClick}>Show me the Weather</button>
+      <button id="button" onClick={this.handleClick}><span>Show me the Weather</span></button></h3> </div>
+      <div id="div2">
       <h3>
         How does it look outside? { weather[0]?.description}
       </h3>
@@ -75,6 +78,7 @@ handleClick = () => {
       <h3>
         Wind Speed & Direction: { wind?.deg} degrees { wind?.speed}m/s
       </h3>
+      </div>
       </>
     )
   }
