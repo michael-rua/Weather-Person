@@ -66,13 +66,13 @@ handleClick = () => {
       onChange={this.handleChange}/>
       <button onClick={this.handleClick}>Show me the Weather</button>
       <p>
-        {weather[0]?.description}
+        How does it look outside? { weather[0]?.description}
       </p>
       <p>
-        {main?.temp}
+        Temperature: { main?.temp}
       </p>
       <p>
-        Wind Speed - {wind?.deg} degrees {wind?.speed}m/s
+        Wind Speed & Direction: { wind?.deg} degrees { wind?.speed}m/s
       </p>
       </>
     )
