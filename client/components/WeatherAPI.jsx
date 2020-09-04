@@ -3,6 +3,7 @@ import { getWeather } from '../api'
 
 class WeatherApi extends React.Component {
   state = {
+    name: '',
     weather: [],
     main: null,
     wind: null,
@@ -45,6 +46,7 @@ handleClick = () => {
   getWeather(finalCity)
   .then(wth => { console.log(wth.weather)
           this.setState({
+            name: wth.name,
             weather: wth.weather,
             main: wth.main,
             wind: wth.wind,
@@ -58,7 +60,7 @@ handleClick = () => {
     
 
   render () {
-    const {weather, main, wind} = this.state
+    const {weather, main, wind, name} = this.state
     return (
       <>
       <div id="div1">
@@ -68,6 +70,8 @@ handleClick = () => {
       onChange={this.handleChange}/>
       <button id="button" onClick={this.handleClick}><span>Show me the Weather</span></button></h3> </div>
       <div id="div2">
+
+        <h2> { this.state.name} </h2>
       <h3>
         How does it look outside? { weather[0]?.description}
       </h3>
@@ -76,7 +80,7 @@ handleClick = () => {
         Temperature: { main?.temp}
       </h3>
       <h3>
-        Wind Speed & Direction: { wind?.deg} degrees { wind?.speed}m/s
+        Wind Direction & Speed: { wind?.deg} degrees { wind?.speed}m/s
       </h3>
       </div>
       </>
