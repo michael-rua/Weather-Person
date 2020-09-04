@@ -61,7 +61,7 @@ handleClick = () => {
     const {weather, main, wind} = this.state
     return (
       <>
-      Search: <input name= 'input' 
+      Search: <input id="input" name= 'input' 
       value={this.state.input}
       onChange={this.handleChange}/>
       <button onClick={this.handleClick}>Show me the Weather</button>
