@@ -5,6 +5,7 @@ import data from '../../data/data'
 export default class Message extends React.Component {
   constructor (props) {
     super(props)
+    console.log('PROPS:', props)
     this.state = {
       condition: ''
     }
@@ -17,8 +18,10 @@ export default class Message extends React.Component {
     this.setState = {
       condition: this.props.main
     }
-    this.message = data[this.state.condition].message
-    this.img = data[this.state.condition].img
+    console.log('THIS PROPS', this.props.main)
+    console.log('STATE ', this.state.condition)
+    this.message = data[this.props.main].message
+    this.img = data[this.props.main].img
   }
 
   render () {
@@ -32,7 +35,6 @@ export default class Message extends React.Component {
     )
   }
 }
-
 
 // function checkWeather () {
 //   let message = ''
