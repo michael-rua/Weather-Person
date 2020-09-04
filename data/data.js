@@ -1,26 +1,26 @@
 const data = {
   clear: {
-    message: 'It\'s sunny! You can go for a walk... but don\'t forget your face mask!'
+    message: 'It\'s sunny! You can go for a walk... but don\'t forget your face mask!',
     img: '01'
   },
   drizzle: {
-    message: 'drizzle',
+    message: 'Drizzle, yay!',
     img: '10'
   },
   rainy: {
-    message: "it's rainy",
+    message: 'It\'s going to rain today, don\'t forget your raincoat',
     img: '09'
   },
   clouds: {
-    message: "it's cloudy",
+    message: 'It\'s cloudy today!',
     img: '03'
   },
   snow: {
-    message: 'snow',
+    message: 'Snow day!! Woohoo!',
     img: '13'
   },
   thunderstorm: {
-    message: 'thunder',
+    message: 'Hmm... maybe you should stay in bed today.',
     img: '11'
   }
 }
