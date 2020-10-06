@@ -5,6 +5,9 @@ to run this app on master,
 npm i,
 npm run dev
 
+Or view it on
+https://mkmkcityweather.herokuapp.com/
+
 # MVP
 
 * The user will be able to type a city name into a form and receive current weather information
