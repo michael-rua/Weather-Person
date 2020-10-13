@@ -1,7 +1,7 @@
 # WeatherPerson 
 This app is from early on in the EDA course, We had just learnt how to implement API's in to our apps. This was a one day challenge where we wanted to build a weather forescasting app based on openWEather API. Putting a city name in and getting the forescast as well as a recommendation for the day.
 
-![Weatherperson, Auckland](/public/cityweather.png)
+![Weatherperson, Auckland](/cityweather.png)
 
 to run this app on master,
 npm i,
